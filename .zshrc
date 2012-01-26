@@ -1,7 +1,5 @@
-setopt promptsubst
-autoload -U promptinit
-promptinit
-prompt adam1
+autoload -U colors && colors
+export PS1="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%~ %{$reset_color%}%% "
 
 alias ls='ls --classify --tabsize=0 --literal --color=auto --show-control-chars --human-readable'
 alias ls='ls -G'
