@@ -16,12 +16,6 @@ export HISTSIZE=100000
 export HISTFILE=$HOME/.history
 export SAVEHIST=$HISTSIZE
 
-if [ "`id -u`" -eq 0 ]; then
-  export PS1="%{[36;1m%}%T %{[34m%}%n%{[33m%}@%{[37m%}%m %{[32m%}%~ %{[33m%}%#%{[0m%} "
-else
-  export PS1="%{[36;1m%}%T %{[31m%}%n%{[33m%}@%{[37m%}%m %{[32m%}%~ %{[33m%}%#%{[0m%} "
-fi
-
 # no beep
 unsetopt beep
 unsetopt hist_beep
