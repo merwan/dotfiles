@@ -1,3 +1,6 @@
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
 alias mv='mv -i'
 alias rm='rm -i'
 alias cp='cp -i'
@@ -5,3 +8,4 @@ alias lla='ls -la'
 alias duh='du -csh'
 alias sr='screen -r'
 alias r=rails
+alias update='sudo apt-get update && sudo apt-get upgrade --purge && sudo apt-get clean'

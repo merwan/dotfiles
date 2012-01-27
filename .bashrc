@@ -59,10 +59,7 @@ if [ "$TERM" != "dumb" ]; then
     #alias vdir='ls --color=auto --format=long'
 fi
 
-# some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 xset -b
 

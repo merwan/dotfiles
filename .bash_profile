@@ -14,4 +14,3 @@ fi
 if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function

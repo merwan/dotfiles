@@ -8,6 +8,7 @@ compinit
 alias ls='ls --classify --tabsize=0 --literal --color=auto --show-control-chars --human-readable'
 alias ll='ls -lg'
 alias duh='du -csh'
+alias update='sudo apt-get update && sudo apt-get upgrade --purge && sudo apt-get clean'
 
 export TERM='rxvt-unicode'
 export GREP_OPTIONS="--color"
