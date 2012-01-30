@@ -16,7 +16,7 @@ set ignorecase          " ignore case when searching
 set smartcase           " no ignorecase if Uppercase char present
 
 set visualbell t_vb=    " turn off error beep/flash
-set novisualbell        " turn off visual bell
+set noeb vb t_vb=
 
 set backspace=indent,eol,start  " make that backspace key work the way it should
 
