@@ -16,7 +16,7 @@ alias cp='cp -i'
 alias lla='ls -la'
 alias sr='screen -r'
 alias r=rails
-alias update='sudo apt-get update && sudo apt-get upgrade --purge && sudo apt-get clean'
+alias update='sudo apt-get update && sudo apt-get dist-upgrade --purge && sudo apt-get clean'
 
 export TERM='rxvt-unicode'
 export GREP_OPTIONS="--color"
