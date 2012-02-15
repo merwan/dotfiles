@@ -14,6 +14,8 @@ set incsearch           " do incremental searching
 set showmatch           " jump to matches when entering regexp
 set ignorecase          " ignore case when searching
 set smartcase           " no ignorecase if Uppercase char present
+set cursorline
+set showmatch
 
 set visualbell t_vb=    " turn off error beep/flash
 set noeb vb t_vb=
@@ -30,5 +32,8 @@ set shiftwidth=4
 set expandtab
 
 set t_RV=               " http://bugs.debian.org/608242, http://groups.google.com/group/vim_dev/browse_thread/thread/9770ea844cec3282
+
+set showtabline=2
+set hidden
 
 colorscheme moria
