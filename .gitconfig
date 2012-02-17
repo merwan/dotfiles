@@ -1,0 +1,15 @@
+[user]
+	name = Merouane Atig
+	email = yahoocbien-dev@yahoo.fr
+[color]
+	status = auto
+	branch = auto
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    di = diff
+    dc = diff --cached
+    amend = commit --amend
+    aa = add --all
+    b = branch
