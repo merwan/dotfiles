@@ -36,4 +36,7 @@ set t_RV=               " http://bugs.debian.org/608242, http://groups.google.co
 set showtabline=2
 set hidden
 
-colorscheme moria
+" color scheme from GRB
+:set t_Co=256
+:set background=dark
+:color grb256
