@@ -36,6 +36,10 @@ set t_RV=               " http://bugs.debian.org/608242, http://groups.google.co
 set showtabline=2
 set hidden
 
+" Store temporary files in a central spot
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
 let mapleader=","
 
 " Map ,e and ,v to open files in the same directory as the current file
