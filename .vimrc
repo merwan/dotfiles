@@ -36,6 +36,13 @@ set t_RV=               " http://bugs.debian.org/608242, http://groups.google.co
 set showtabline=2
 set hidden
 
+let mapleader=","
+
+" Map ,e and ,v to open files in the same directory as the current file
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
+
 " color scheme from GRB
 :set t_Co=256
 :set background=dark
