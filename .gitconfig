@@ -2,6 +2,7 @@
 	name = Merouane Atig
 	email = yahoocbien-dev@yahoo.fr
 [color]
+	diff = auto
 	status = auto
 	branch = auto
 [alias]
