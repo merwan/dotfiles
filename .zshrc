@@ -1,5 +1,5 @@
-# use vim key bindings
-bindkey -v
+# use emacs key bindings
+set -o emacs
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 autoload -U colors && colors
