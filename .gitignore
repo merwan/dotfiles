@@ -2,7 +2,9 @@
 /Desktop
 /Developpement
 /Documents
+/Downloads
 /Dropbox
+/Images
 /.ssh
 /.config
 /.rvm
@@ -14,3 +16,4 @@
 /.icedove
 /.vim-tmp
 /public_html
+/.*
