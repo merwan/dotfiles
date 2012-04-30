@@ -33,3 +33,6 @@ unsetopt beep
 unsetopt hist_beep
 unsetopt list_beep
 xset -b
+
+# Solarized palette for ls
+eval `dircolors ~/.dir_colors`
