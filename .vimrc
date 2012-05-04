@@ -1,3 +1,6 @@
+" This is Merouane Atig's .vimrc file
+" vim:set ts=2 sts=2 sw=2 expandtab:
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -108,6 +111,7 @@ inoremap <s-tab> <c-n>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>y "*y
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+nnoremap <CR> :nohlsearch<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
