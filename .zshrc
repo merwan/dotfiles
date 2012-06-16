@@ -20,6 +20,7 @@ alias lla='ls -la'
 alias sr='screen -r'
 alias r=rails
 alias update='sudo apt-get update && sudo apt-get dist-upgrade --purge && sudo apt-get clean'
+alias nuget='mono --runtime=v4.0.30319 ~/bin/NuGet.exe'
 
 export TERM='rxvt-unicode'
 export GREP_OPTIONS="--color"
