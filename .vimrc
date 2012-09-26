@@ -23,6 +23,8 @@ set smartcase           " no ignorecase if Uppercase char present
 set cursorline
 set showmatch
 
+set mouse=r             " paste from mouse middle click
+
 set visualbell t_vb=    " turn off error beep/flash
 set noeb vb t_vb=
 
@@ -111,6 +113,7 @@ inoremap <s-tab> <c-n>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>= gg=G
 map <leader>y "*y
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 nnoremap <CR> :nohlsearch<cr>
