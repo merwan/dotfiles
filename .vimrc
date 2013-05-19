@@ -115,7 +115,6 @@ inoremap <s-tab> <c-n>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>= gg=G
 map <leader>y "*y
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 nnoremap <CR> :nohlsearch<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
