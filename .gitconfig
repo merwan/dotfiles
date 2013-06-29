@@ -18,3 +18,5 @@
     la = !git l --all
     r = !git l -30
     ra = !git r --all
+[push]
+	default = simple
