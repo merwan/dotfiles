@@ -20,3 +20,5 @@
     ra = !git r --all
 [push]
     default = simple
+[rerere]
+    enabled = true
