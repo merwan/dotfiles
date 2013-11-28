@@ -1,10 +1,10 @@
 [user]
-	name = Merouane Atig
-	email = yahoocbien-dev@yahoo.fr
+    name = Merouane Atig
+    email = merouane.atig@gmail.com
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+    diff = auto
+    status = auto
+    branch = auto
 [alias]
     st = status
     ci = commit
@@ -19,4 +19,4 @@
     r = !git l -30
     ra = !git r --all
 [push]
-	default = simple
+    default = simple
