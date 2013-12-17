@@ -1,4 +1,9 @@
-## Installation
+dotfiles.git
+============
+Clone and run this on a new box to configure the dot files:
 
-```bash
-$ git clone --recursive git@github.com:merwan/dotfiles.git
+```sh
+cd $HOME
+git clone --recursive https://github.com/merwan/dotfiles.git
+sh dotfiles/setup.sh
+```
