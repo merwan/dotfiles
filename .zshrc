@@ -75,3 +75,5 @@ xset -b
 
 # Solarized palette for ls
 eval `dircolors ~/.dir_colors`
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
