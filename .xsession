@@ -1,2 +1,2 @@
-exec startlxde
+exec startxfce4
 xset b off
