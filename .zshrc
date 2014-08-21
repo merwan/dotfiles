@@ -55,10 +55,8 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias lla='ls -la'
 alias r=rails
-alias update='sudo apt-get update && sudo apt-get dist-upgrade --purge && sudo apt-get clean'
-alias autoremove='sudo apt-get autoremove --purge'
-alias nuget='mono --runtime=v4.0.30319 ~/bin/NuGet.exe'
-alias eclipse='~/eclipse/eclipse'
+alias pingg='ping www.google.com'
+[[ -s "$HOME/.aliases" ]] && source "$HOME/.aliases" # local aliases
 
 export TERM='rxvt-unicode'
 export GREP_OPTIONS="--color"
