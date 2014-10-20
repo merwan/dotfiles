@@ -76,3 +76,7 @@ eval `dircolors ~/.dir_colors`
 
 PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/workspace
+source .local/bin/virtualenvwrapper.sh
