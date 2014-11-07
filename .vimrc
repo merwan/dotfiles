@@ -112,7 +112,7 @@ let g:ctrlp_working_path_mode = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>= gg=G
+map <leader>= mIgg=G`I
 map <leader>y "*y
 nnoremap <CR> :nohlsearch<cr>
 
