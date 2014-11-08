@@ -40,7 +40,7 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rvm)
+plugins=(git rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -74,4 +74,9 @@ xset -b
 # Solarized palette for ls
 eval `dircolors ~/.dir_colors`
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/workspace
+source $HOME/.local/bin/virtualenvwrapper.sh
