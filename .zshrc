@@ -74,7 +74,7 @@ xset -b
 # Solarized palette for ls
 eval `dircolors ~/.dir_colors`
 
-PATH="$HOME/.rbenv/bin:$PATH"
+PATH="$HOME/bin:$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 function () {
