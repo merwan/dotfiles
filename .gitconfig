@@ -22,3 +22,6 @@
     default = simple
 [rerere]
     enabled = true
+[diff "gzip"]
+    binary = true
+    textconv = /bin/zcat
