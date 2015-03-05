@@ -22,6 +22,8 @@
     default = simple
 [rerere]
     enabled = true
+[diff]
+    tool = vimdiff
 [diff "gzip"]
     binary = true
     textconv = /bin/zcat
