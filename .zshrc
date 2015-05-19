@@ -58,7 +58,7 @@ alias r=rails
 alias pingg='ping www.google.com'
 [[ -s "$HOME/.aliases" ]] && source "$HOME/.aliases" # local aliases
 
-export TERM='rxvt-unicode'
+export TERM='rxvt-unicode-256color'
 export GREP_OPTIONS="--color"
 
 export HISTSIZE=100000
