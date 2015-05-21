@@ -14,3 +14,4 @@ ln -sf dotfiles/.oh-my-zsh .
 ln -sf dotfiles/.zshrc .
 ln -sf dotfiles/.dir_colors .
 ln -sf dotfiles/gemrc ~/.gemrc
+ln -sf dotfiles/.tmux.conf ~/.tmux.conf
