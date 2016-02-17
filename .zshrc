@@ -74,12 +74,5 @@ xset -b
 eval `dircolors ~/.dir_colors`
 
 PATH="$HOME/bin:$PATH"
-
-function () {
-    local script=$HOME/.local/bin/virtualenvwrapper.sh
-    if [[ -a $script ]]; then
-        export WORKON_HOME=$HOME/.virtualenvs
-        export PROJECT_HOME=$HOME/workspace
-        source $script
-    fi
-}
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
