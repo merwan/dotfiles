@@ -25,6 +25,7 @@ stow vim
 # Available configuration files:
 
 * bash
+* gem
 * git
 * tmux
 * vim
