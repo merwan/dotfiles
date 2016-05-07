@@ -1,9 +1,9 @@
 [submodule ".vim/bundle/vim-colors-solarized"]
-	path = .vim/bundle/vim-colors-solarized
+	path = vim/.vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 	branch = master
 [submodule ".vim/bundle/vim-ruby"]
-	path = .vim/bundle/vim-ruby
+	path = vim/.vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
 	branch = master
 [submodule ".oh-my-zsh"]
@@ -11,38 +11,38 @@
 	url = git://github.com/robbyrussell/oh-my-zsh.git
 	branch = master
 [submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
+	path = vim/.vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
 	branch = master
 [submodule ".vim/bundle/html5.vim"]
-	path = .vim/bundle/html5.vim
+	path = vim/.vim/bundle/html5.vim
 	url = git://github.com/othree/html5.vim.git
 	branch = master
 [submodule ".vim/bundle/python-mode"]
-	path = .vim/bundle/python-mode
+	path = vim/.vim/bundle/python-mode
 	url = git://github.com/klen/python-mode.git
 	branch = master
 [submodule ".vim/bundle/vim-markdown"]
-	path = .vim/bundle/vim-markdown
+	path = vim/.vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
 	branch = master
 [submodule ".vim/bundle/vim-javascript"]
-	path = .vim/bundle/vim-javascript
+	path = vim/.vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
 	branch = master
 [submodule ".vim/bundle/rust.vim"]
-	path = .vim/bundle/rust.vim
+	path = vim/.vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
 	branch = master
 [submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
+	path = vim/.vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
 	branch = master
 [submodule ".vim/bundle/vim-rails"]
-	path = .vim/bundle/vim-rails
+	path = vim/.vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
 	branch = master
 [submodule ".vim/bundle/vim-bundler"]
-	path = .vim/bundle/vim-bundler
+	path = vim/.vim/bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
 	branch = master
