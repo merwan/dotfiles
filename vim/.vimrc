@@ -1,8 +1,7 @@
 " This is Merouane Atig's .vimrc file
 " vim:set ts=2 sts=2 sw=2 expandtab:
 
-call pathogen#infect()
-call pathogen#helptags()
+execute pathogen#infect()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
