@@ -26,4 +26,5 @@ stow vim
 
 * tmux
 * vim
+* X
 * zsh
