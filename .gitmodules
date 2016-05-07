@@ -7,7 +7,7 @@
 	url = https://github.com/vim-ruby/vim-ruby.git
 	branch = master
 [submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
+	path = zsh/.oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
 	branch = master
 [submodule ".vim/bundle/vim-surround"]
