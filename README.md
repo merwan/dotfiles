@@ -24,4 +24,5 @@ stow vim
 
 # Available configuration files:
 
+* tmux
 * vim
