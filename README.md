@@ -1,9 +1,27 @@
 dotfiles.git
 ============
-Clone and run this on a new box to configure the dot files:
+
+# Installation
+
+Install stow:
+```
+sudo apt-get install stow
+```
+
+Clone this repository:
 
 ```sh
 cd $HOME
 git clone --recursive https://github.com/merwan/dotfiles.git
-sh dotfiles/setup.sh
 ```
+
+Enter `dotfiles` directory and use stow to install selected configuration files:
+
+```sh
+cd dotfiles
+stow vim
+```
+
+# Available configuration files:
+
+* vim
