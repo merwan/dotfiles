@@ -151,6 +151,7 @@ nnoremap <c-g> :call SelectaIdentifier()<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
 map <leader>= mIgg=G`I
 map <leader>y "*y
 nnoremap <CR> :nohlsearch<cr>
@@ -182,9 +183,9 @@ function! RunTests(filename)
     if filereadable("script/test")
       exec ":!script/test " . a:filename
     elseif filereadable("Gemfile")
-      exec ":!bundle exec rspec --color " . a:filename
+      exec ":!docker-compose run --rm web rspec --color " . a:filename
     else
-      exec ":!rspec --color " . a:filename
+      exec ":!docker-compose run --rm web rspec --color " . a:filename
     end
   end
 endfunction
