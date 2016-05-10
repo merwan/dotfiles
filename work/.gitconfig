@@ -1,0 +1,29 @@
+[user]
+    name = Merouane Atig
+    email = merouane@teezily.com
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    di = diff
+    dc = diff --cached
+    amend = commit --amend
+    aa = add --all
+    b = branch
+    l = "!. ~/.githelpers && pretty_git_log"
+    la = !git l --all
+    r = !git l -30
+    ra = !git r --all
+[push]
+    default = simple
+[rerere]
+    enabled = true
+[diff]
+    tool = vimdiff
+[diff "gzip"]
+    binary = true
+    textconv = /bin/zcat
