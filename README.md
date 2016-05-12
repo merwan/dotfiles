@@ -31,3 +31,9 @@ stow vim
 * vim
 * X
 * zsh
+
+# Update submodules to latest revision
+
+```
+git submodule update --init --remote
+```
