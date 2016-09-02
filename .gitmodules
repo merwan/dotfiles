@@ -46,3 +46,7 @@
 	path = vim/.vim/bundle/vim-bundler
 	url = git://github.com/tpope/vim-bundler.git
 	branch = master
+[submodule "vim/.vim/bundle/syntastic"]
+	path = vim/.vim/bundle/syntastic
+	url = git@github.com:scrooloose/syntastic.git
+	branch = master
