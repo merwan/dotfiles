@@ -1,2 +1,1 @@
-source ~/.zshrc
-/usr/bin/setxkbmap -option "ctrl:nocaps"
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
