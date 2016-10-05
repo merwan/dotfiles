@@ -27,3 +27,7 @@
 [diff "gzip"]
     binary = true
     textconv = /bin/zcat
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
