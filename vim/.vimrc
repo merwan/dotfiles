@@ -167,7 +167,6 @@ nnoremap <c-g> :call SelectaIdentifier()<cr>
 map <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
 map <leader>= mIgg=G`I
 map <leader>y "*y
-nnoremap <C-l> :nohlsearch<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BUFFER LIST KEY MAPS
