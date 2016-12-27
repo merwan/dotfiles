@@ -50,3 +50,7 @@
 	path = vim/.vim/bundle/syntastic
 	url = git@github.com:scrooloose/syntastic.git
 	branch = master
+[submodule "vim/.vim/bundle/mustache"]
+	path = vim/.vim/bundle/mustache
+	url = https://github.com/mustache/vim-mustache-handlebars
+	branch = master
