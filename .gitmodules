@@ -63,3 +63,6 @@
 [submodule "vim/.vim/bundle/vim-projectionist"]
 	path = vim/.vim/bundle/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist
+[submodule "zsh/.fzf"]
+	path = zsh/.fzf
+	url = https://github.com/junegunn/fzf.git

@@ -31,6 +31,7 @@ stow vim
 * vim
 * X
 * zsh
+  * Install fzf with `~/.fzf/install`
 
 # Update submodules to latest revision
 
