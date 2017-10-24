@@ -31,7 +31,8 @@ stow vim
 * vim
 * X
 * zsh
-  * Install fzf with `~/.fzf/install`
+    * Install fzf with `~/.fzf/install`
+    * Install Ag: `sudo apt-get install silversearcher-ag`
 
 # Update submodules to latest revision
 

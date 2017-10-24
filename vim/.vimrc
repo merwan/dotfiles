@@ -137,6 +137,7 @@ inoremap <s-tab> <c-n>
 set rtp+=~/.fzf
 nmap <leader>; :Buffers<CR>
 nmap <leader>f :Files<CR>
+nmap <leader>g :Ag<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
