@@ -54,3 +54,12 @@
 	path = vim/.vim/bundle/mustache
 	url = https://github.com/mustache/vim-mustache-handlebars
 	branch = master
+[submodule "vim/.vim/bundle/elm-vim"]
+	path = vim/.vim/bundle/elm-vim
+	url = https://github.com/ElmCast/elm-vim
+[submodule "vim/.vim/bundle/vim-rake"]
+	path = vim/.vim/bundle/vim-rake
+	url = https://github.com/tpope/vim-rake
+[submodule "vim/.vim/bundle/vim-projectionist"]
+	path = vim/.vim/bundle/vim-projectionist
+	url = https://github.com/tpope/vim-projectionist
