@@ -12,7 +12,6 @@ set ai                  " set auto-indenting on for programming
 
 set showcmd             " display incomplete commands
 set nobackup            " do not keep a backup file
-set number              " show line numbers
 set ruler               " show the current row and column
 
 set hlsearch            " highlight searches
@@ -92,7 +91,7 @@ augroup vimrcEx
         \ endif
 
   "for ruby, autoindent with two spaces, always expand tabs
-  autocmd FileType ruby,haml,eruby,yaml,html,htmldjango,javascript,sass,cucumber,html.handlebars set ai sw=2 sts=2 et
+  autocmd FileType ruby,haml,eruby,yaml,html,htmldjango,javascript,json,sass,cucumber,html.handlebars set ai sw=2 sts=2 et
   autocmd FileType python set sw=4 sts=4 et
 
   autocmd! BufRead,BufNewFile *.sass setfiletype sass
