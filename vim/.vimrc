@@ -131,13 +131,16 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FZF CONFIGURATION
+" FZF + ACK CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set rtp+=~/.fzf
 nmap <leader>; :Buffers<CR>
 nmap <leader>f :Files<CR>
 nmap <leader>g :Ag<CR>
+
+" Tell ack.vim to use ag (the Silver Searcher) instead
+let g:ackprg = 'ag --vimgrep'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
