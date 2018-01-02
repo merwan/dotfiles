@@ -1,0 +1,2 @@
+alias dk="docker-compose"
+alias dkr="docker-compose --rm run web"
