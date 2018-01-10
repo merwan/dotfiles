@@ -1,2 +1,6 @@
+alias update="sudo apt-get update && sudo apt-get dist-upgrade && sudo update-pepperflashplugin-nonfree --install"
+alias autoremove="sudo apt-get autoremove --purge"
 alias dk="docker-compose"
 alias dkr="docker-compose run --rm"
+alias python="python3"
+alias pip="pip3"
