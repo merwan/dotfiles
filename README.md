@@ -33,6 +33,7 @@ stow vim
 * zsh
     * Install fzf with `~/.fzf/install`
     * Install Ag: `sudo apt-get install silversearcher-ag`
+    * Install autojump: `sudo apt-get install autojump`
 
 # Update submodules to latest revision
 
