@@ -26,6 +26,7 @@ stow vim
 
 * bash
 * gem
+* asdf
 * git
 * tmux
 * vim
