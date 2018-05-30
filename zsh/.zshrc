@@ -82,3 +82,7 @@ export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Configure Autojump
 . /usr/share/autojump/autojump.sh
+
+# Load ASDF
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
