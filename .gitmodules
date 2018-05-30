@@ -53,21 +53,27 @@
 [submodule "vim/.vim/bundle/elm-vim"]
 	path = vim/.vim/bundle/elm-vim
 	url = https://github.com/ElmCast/elm-vim
+    branch = master
 [submodule "vim/.vim/bundle/vim-rake"]
 	path = vim/.vim/bundle/vim-rake
 	url = https://github.com/tpope/vim-rake
+    branch = master
 [submodule "vim/.vim/bundle/vim-projectionist"]
 	path = vim/.vim/bundle/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist
+    branch = master
 [submodule "zsh/.fzf"]
 	path = zsh/.fzf
 	url = https://github.com/junegunn/fzf.git
+    branch = master
 [submodule "vim/.vim/bundle/fzf.vim"]
 	path = vim/.vim/bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+    branch = master
 [submodule "vim/.vim/bundle/ack.vim"]
 	path = vim/.vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim
+    branch = master
 [submodule "vim/.vim/bundle/ale"]
 	path = vim/.vim/bundle/ale
 	url = https://github.com/w0rp/ale.git
@@ -75,6 +81,7 @@
 [submodule "vim/.vim/bundle/vim-elixir"]
 	path = vim/.vim/bundle/vim-elixir
 	url = https://github.com/elixir-lang/vim-elixir.git
+    branch = master
 [submodule "asdf/.asdf"]
 	path = asdf/.asdf
 	url = https://github.com/asdf-vm/asdf.git
