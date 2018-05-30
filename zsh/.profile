@@ -21,4 +21,3 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 /usr/bin/setxkbmap -option "ctrl:nocaps"
-export NPM_CONFIG_PREFIX=~/.npm-global
