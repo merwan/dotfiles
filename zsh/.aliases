@@ -1,8 +1,17 @@
-alias update="sudo apt-get update && sudo apt-get dist-upgrade --purge && sudo update-pepperflashplugin-nonfree --install"
-alias autoremove="sudo apt-get autoremove --purge"
+# Administration
+alias update="sudo apt update && sudo apt dist-upgrade --purge && sudo update-pepperflashplugin-nonfree --install"
+alias autoremove="sudo apt autoremove --purge"
+alias ip='ip --color'
+alias ipb='ip --color --brief'
+
+# Docker
 alias dk="docker-compose"
 alias dkr="docker-compose run --rm"
 alias odk="optirun docker-compose"
 alias odkr="optirun docker-compose run --rm"
+
+# Python
 alias python="python3"
 alias pip="pip3"
+
+[[ -s "$HOME/.aliases-local" ]] && source "$HOME/.aliases-local" # local aliases

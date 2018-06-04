@@ -56,7 +56,7 @@ alias cp='cp -i'
 alias lla='ls -la'
 alias r=rails
 alias pingg='ping www.google.com'
-[[ -s "$HOME/.aliases" ]] && source "$HOME/.aliases" # local aliases
+[[ -s "$HOME/.aliases" ]] && source "$HOME/.aliases" # my aliases
 
 export TERM='rxvt-unicode-256color'
 
