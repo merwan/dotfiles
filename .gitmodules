@@ -85,3 +85,6 @@
 [submodule "asdf/.asdf"]
 	path = asdf/.asdf
 	url = https://github.com/asdf-vm/asdf.git
+[submodule "vim/.vim/bundle/vim-rhubarb"]
+	path = vim/.vim/bundle/vim-rhubarb
+	url = https://github.com/tpope/vim-rhubarb
