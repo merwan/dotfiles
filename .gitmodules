@@ -88,3 +88,10 @@
 [submodule "vim/.vim/bundle/vim-rhubarb"]
 	path = vim/.vim/bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
+[submodule "vim/.vim/bundle/Vim-Jinja2-Syntax"]
+	path = vim/.vim/bundle/Vim-Jinja2-Syntax
+	url = https://github.com/Glench/Vim-Jinja2-Syntax
+[submodule "vim/.vim/bundle/nginx.vim"]
+	path = vim/.vim/bundle/nginx.vim
+	url = https://github.com/chr4/nginx.vim
+	branch = master
