@@ -39,5 +39,5 @@ stow vim
 # Update submodules to latest revision
 
 ```
-git submodule update --init --remote
+git submodule update --init --remote --recursive
 ```
