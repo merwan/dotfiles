@@ -85,6 +85,7 @@
 [submodule "asdf/.asdf"]
 	path = asdf/.asdf
 	url = https://github.com/asdf-vm/asdf.git
+    branch = master
 [submodule "vim/.vim/bundle/vim-rhubarb"]
 	path = vim/.vim/bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
@@ -94,4 +95,12 @@
 [submodule "vim/.vim/bundle/nginx.vim"]
 	path = vim/.vim/bundle/nginx.vim
 	url = https://github.com/chr4/nginx.vim
+	branch = master
+[submodule "vim/.vim/bundle/vim-airline"]
+	path = vim/.vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+	branch = master
+[submodule "vim/.vim/bundle/vim-airline-themes"]
+	path = vim/.vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
 	branch = master
