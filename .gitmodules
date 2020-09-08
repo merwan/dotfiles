@@ -104,3 +104,7 @@
 	path = vim/.vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
 	branch = master
+[submodule "vim/.vim/pack/plugins/start/vim-hcl"]
+	path = vim/.vim/pack/plugins/start/vim-hcl
+	url = https://github.com/jvirtanen/vim-hcl.git
+	branch = master

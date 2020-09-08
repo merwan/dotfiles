@@ -40,7 +40,6 @@ set expandtab
 
 set t_RV=               " http://bugs.debian.org/608242, http://groups.google.com/group/vim_dev/browse_thread/thread/9770ea844cec3282
 
-set showtabline=2
 set hidden
 
 " Store temporary files in a central spot
@@ -49,14 +48,18 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 let mapleader=","
 
+set clipboard=unnamedplus " alias unnamed register to the + register, which is the X Window clipboard.
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ALE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {'python': ['flake8']}
+let g:ale_echo_delay = 1000
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PYTHON-MODE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pymode_python = 'python3'
 let g:pymode_folding = 0
 let g:pymode_doc = 0
 let g:pymode_rope_complete_on_dot = 0
@@ -82,8 +85,8 @@ augroup vimrcEx
         \ endif
 
   "for ruby, autoindent with two spaces, always expand tabs
-  autocmd FileType ruby,haml,eruby,yaml,html,htmldjango,javascript,json,sass,cucumber,html.handlebars set ai sw=2 sts=2 et
-  autocmd FileType python set sw=4 sts=4 et
+  autocmd FileType ruby,haml,eruby,yaml,html,htmldjango,json,sass,cucumber,html.handlebars set ai sw=2 sts=2 et
+  autocmd FileType shell,python,javascript,typescript set sw=4 sts=4 et
 
   autocmd! BufRead,BufNewFile *.sass setfiletype sass
 
@@ -103,8 +106,10 @@ colorscheme solarized
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
-:hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
+
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
@@ -139,6 +144,7 @@ let g:ackprg = 'ag --vimgrep'
 map <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
 map <leader>= mIgg=G`I
 map <leader>y "*y
+map <leader><space> :nohlsearch<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BUFFER LIST KEY MAPS
