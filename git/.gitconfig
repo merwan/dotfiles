@@ -1,11 +1,13 @@
 [user]
     name = Merouane Atig
     email = merwan@patem.net
+    signingkey = 1310AB38E07F05FB
 [color]
     diff = auto
     status = auto
     branch = auto
 [alias]
+    poule = pull
     st = status
     ci = commit
     co = checkout
@@ -23,7 +25,13 @@
 [rerere]
     enabled = true
 [diff]
-    tool = vimdiff
+    tool = meld
 [diff "gzip"]
     binary = true
     textconv = /bin/zcat
+[pull]
+    ff = only
+[init]
+    defaultBranch = main
+[commit]
+    gpgsign = true
