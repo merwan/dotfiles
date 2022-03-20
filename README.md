@@ -36,6 +36,12 @@ stow vim
     * Install Ag: `sudo apt-get install silversearcher-ag`
     * Install autojump: `sudo apt-get install autojump`
 
+# Add a new submodule
+
+```
+git submodule add -b master url_to_git_repo  /path/target
+```
+
 # Update submodules to latest revision
 
 ```

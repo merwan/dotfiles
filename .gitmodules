@@ -104,3 +104,7 @@
 	path = vim/.vim/pack/plugins/start/vim-hcl
 	url = https://github.com/jvirtanen/vim-hcl.git
 	branch = master
+[submodule "vim/.vim/pack/tpope/start/fugitive"]
+	path = vim/.vim/pack/tpope/start/fugitive
+	url = https://tpope.io/vim/fugitive.git
+	branch = master
