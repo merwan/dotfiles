@@ -10,10 +10,6 @@
 	path = zsh/.oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
 	branch = master
-[submodule ".vim/bundle/vim-surround"]
-	path = vim/.vim/bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
-	branch = master
 [submodule ".vim/bundle/python-mode"]
 	path = vim/.vim/bundle/python-mode
 	url = git://github.com/python-mode/python-mode.git
@@ -111,4 +107,8 @@
 [submodule "vim/.vim/pack/tpope/start/vim-rails"]
 	path = vim/.vim/pack/tpope/start/vim-rails
 	url = https://github.com/tpope/vim-rails
+	branch = master
+[submodule "vim/.vim/pack/tpope/start/vim-surround"]
+	path = vim/.vim/pack/tpope/start/vim-surround
+	url = https://github.com/tpope/vim-surround
 	branch = master
