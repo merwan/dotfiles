@@ -108,3 +108,7 @@
 	path = vim/.vim/pack/tpope/start/fugitive
 	url = https://tpope.io/vim/fugitive.git
 	branch = master
+[submodule "vim/.vim/pack/tpope/start/vim-rails"]
+	path = vim/.vim/pack/tpope/start/vim-rails
+	url = https://github.com/tpope/vim-rails
+	branch = master
