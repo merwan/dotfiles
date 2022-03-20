@@ -96,10 +96,6 @@
 	path = vim/.vim/pack/plugins/start/vim-hcl
 	url = https://github.com/jvirtanen/vim-hcl.git
 	branch = master
-[submodule "vim/.vim/pack/tpope/start/fugitive"]
-	path = vim/.vim/pack/tpope/start/fugitive
-	url = https://tpope.io/vim/fugitive.git
-	branch = master
 [submodule "vim/.vim/pack/tpope/start/vim-rails"]
 	path = vim/.vim/pack/tpope/start/vim-rails
 	url = https://github.com/tpope/vim-rails
@@ -111,4 +107,8 @@
 [submodule "zsh/.oh-my-zsh"]
 	path = zsh/.oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
+	branch = master
+[submodule "vim/.vim/pack/tpope/start/vim-fugitive"]
+	path = vim/.vim/pack/tpope/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
 	branch = master
