@@ -6,10 +6,6 @@
 	path = vim/.vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
 	branch = master
-[submodule ".oh-my-zsh"]
-	path = zsh/.oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
-	branch = master
 [submodule ".vim/bundle/python-mode"]
 	path = vim/.vim/bundle/python-mode
 	url = git://github.com/python-mode/python-mode.git
@@ -111,4 +107,8 @@
 [submodule "vim/.vim/pack/tpope/start/vim-surround"]
 	path = vim/.vim/pack/tpope/start/vim-surround
 	url = https://github.com/tpope/vim-surround
+	branch = master
+[submodule "zsh/.oh-my-zsh"]
+	path = zsh/.oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
 	branch = master
