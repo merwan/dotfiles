@@ -46,10 +46,6 @@
 	path = vim/.vim/bundle/vim-projectionist
 	url = https://github.com/tpope/vim-projectionist
     branch = master
-[submodule "zsh/.fzf"]
-	path = zsh/.fzf
-	url = https://github.com/junegunn/fzf.git
-    branch = master
 [submodule "vim/.vim/bundle/fzf.vim"]
 	path = vim/.vim/bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
@@ -107,4 +103,8 @@
 [submodule "vim/.vim/pack/tpope/start/vim-fugitive"]
 	path = vim/.vim/pack/tpope/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
+	branch = master
+[submodule "zsh/.fzf"]
+	path = zsh/.fzf
+	url = https://github.com/junegunn/fzf.git
 	branch = master
