@@ -1,5 +1,5 @@
 # Administration
-alias update="sudo apt update && sudo apt dist-upgrade --purge && echo '*** Update Flash' && sudo update-pepperflashplugin-nonfree --install"
+alias update="sudo apt update && sudo apt dist-upgrade --purge"
 alias autoremove="sudo apt autoremove --purge"
 alias ip='ip --color'
 alias ipb='ip --color --brief'
@@ -15,6 +15,6 @@ alias python="python3"
 alias pip="pip3"
 
 # Divers
-alias ytmp3="youtube-dl -x --audio-format=mp3"
+alias ytmp3="yt-dlp -x --audio-format=mp3"
 
 [[ -s "$HOME/.aliases-local" ]] && source "$HOME/.aliases-local" # local aliases
