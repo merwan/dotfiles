@@ -6,10 +6,6 @@
 	path = vim/.vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby.git
 	branch = master
-[submodule ".vim/bundle/vim-markdown"]
-	path = vim/.vim/bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
-	branch = master
 [submodule ".vim/bundle/vim-javascript"]
 	path = vim/.vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
