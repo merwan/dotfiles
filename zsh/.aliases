@@ -10,11 +10,17 @@ alias dkr="docker-compose run --rm"
 alias odk="optirun docker-compose"
 alias odkr="optirun docker-compose run --rm"
 
+# Git
+alias grpo="git remote prune origin"
+
 # Python
 alias python="python3"
 alias pip="pip3"
 
 # Divers
 alias ytmp3="yt-dlp -x --audio-format=mp3"
+GTG_BASE_DIR="~/.var/app/org.gnome.GTG"
+alias gtgwork="ln -snvf $GTG_BASE_DIR-work $GTG_BASE_DIR"
+alias gtgperso="ln -snvf $GTG_BASE_DIR-personal $GTG_BASE_DIR"
 
 [[ -s "$HOME/.aliases-local" ]] && source "$HOME/.aliases-local" # local aliases
