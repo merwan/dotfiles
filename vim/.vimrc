@@ -1,18 +1,21 @@
 " This is Merouane Atig's .vimrc file
 " vim:set ts=2 sts=2 sw=2 expandtab:
 
+let g:ale_disable_lsp = 1
+
 " initialize plugins
 call plug#begin()
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'elixir-editors/vim-elixir'
+Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
+Plug 'elixir-editors/vim-elixir', {'commit': 'ff7a1223dfc'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'romainl/vim-cool'
 Plug 'leafgarland/typescript-vim'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'lifepillar/vim-solarized8'
 Plug 'junegunn/fzf'
 Plug 'mileszs/ack.vim'
