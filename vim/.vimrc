@@ -18,6 +18,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'dense-analysis/ale'
 Plug 'lifepillar/vim-solarized8'
 Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 
 call plug#end()
@@ -86,10 +87,9 @@ colorscheme solarized8
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FZF + ACK CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set rtp+=~/.fzf
 nmap <leader>; :Buffers<CR>
-nmap <leader>f :FZF<CR>
-nmap <leader>g :Ack<CR>
+nmap <leader>f :Files<CR>
+nmap <leader>g :Ag<CR>
 
 " Tell ack.vim to use ag (the Silver Searcher) instead
 let g:ackprg = 'ag --vimgrep'
