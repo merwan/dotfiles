@@ -58,8 +58,6 @@ alias r=rails
 alias pingg='ping www.google.com'
 [[ -s "$HOME/.aliases" ]] && source "$HOME/.aliases" # my aliases
 
-export TERM='rxvt-unicode-256color'
-
 export HISTSIZE=100000
 export HISTFILE=$HOME/.history
 export SAVEHIST=$HISTSIZE
