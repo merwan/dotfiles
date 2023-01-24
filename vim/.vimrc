@@ -6,15 +6,20 @@ let g:ale_disable_lsp = 1
 " initialize plugins
 call plug#begin()
 
+Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'elixir-editors/vim-elixir', {'commit': 'ff7a1223dfc'}
+Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
+"Plug 'fannheyward/coc-pyright'
+Plug 'neoclide/coc-tsserver'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
+Plug 'rust-lang/rust.vim'
 Plug 'romainl/vim-cool'
 Plug 'leafgarland/typescript-vim'
+Plug 'terrastruct/d2-vim'
 Plug 'dense-analysis/ale'
 Plug 'lifepillar/vim-solarized8'
 Plug 'junegunn/fzf'
@@ -78,6 +83,8 @@ endif
 set undodir=/tmp/.vim-undo-dir
 set undofile
 
+set clipboard=unnamedplus " alias unnamed register to the + register, which is the X Window clipboard.
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLORS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -105,6 +112,18 @@ let g:ackprg = 'ag --vimgrep'
 nnoremap <silent> <b :bprevious<CR>
 nnoremap <silent> >b :bnext<CR>
 nmap <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ale configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>= :ALEFix<CR>
+let g:ale_fixers = {
+         \ 'python': ['isort', 'black'],
+         \ 'javascript': ['eslint', 'prettier'],
+         \ 'lua': ['stylua']
+         \ }
+"let g:ale_linters['python'] = ['flake8', 'mypy']
+let g:ale_linters = {'javascript': ['eslint']}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COC configuration
@@ -171,8 +190,8 @@ endfunction
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>=  <Plug>(coc-format-selected)
-nmap <leader>=  <Plug>(coc-format-selected)
+"xmap <leader>=  <Plug>(coc-format-selected)
+"nmap <leader>=  <Plug>(coc-format-selected)
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 if has('nvim-0.4.0') || has('patch-8.2.0750')
@@ -192,3 +211,17 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RUNNING TESTS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RunTests(filename)
+  " Write the file and run tests for the given filename
+  :w
+  let currentfile = expand("%")
+  if match(currentfile, '\.mmd$') != -1
+    exec ":!mmdc -e png -i " . currentfile
+  end
+endfunction
+
+map <leader>a :call RunTests('')<cr>
