@@ -40,7 +40,7 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git colored-man-pages dotenv docker-compose tmuxinator)
+plugins=(git colored-man-pages dotenv docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,7 +71,7 @@ xset -b
 # Solarized palette for ls
 eval `dircolors ~/.dir_colors`
 
-PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -84,3 +84,18 @@ export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 # Load ASDF
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/merouane/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/merouane/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/merouane/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/merouane/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
