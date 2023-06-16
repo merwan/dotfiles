@@ -1,8 +1,6 @@
 " This is Merouane Atig's .vimrc file
 " vim:set ts=2 sts=2 sw=2 expandtab:
 
-let g:ale_disable_lsp = 1
-
 " initialize plugins
 call plug#begin()
 
@@ -10,7 +8,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'elixir-editors/vim-elixir', {'commit': 'ff7a1223dfc'}
 Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
-"Plug 'fannheyward/coc-pyright'
 Plug 'neoclide/coc-tsserver'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -120,10 +117,15 @@ nmap <leader>= :ALEFix<CR>
 let g:ale_fixers = {
          \ 'python': ['isort', 'black'],
          \ 'javascript': ['eslint', 'prettier'],
+         \ 'java': ['clang-format'],
          \ 'lua': ['stylua']
          \ }
-"let g:ale_linters['python'] = ['flake8', 'mypy']
 let g:ale_linters = {'javascript': ['eslint']}
+" move cursor to the next error
+nmap <silent> <C-e> <Plug>(ale_next_wrap)
+" change default markers to dots
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '.'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COC configuration
@@ -221,7 +223,9 @@ function! RunTests(filename)
   let currentfile = expand("%")
   if match(currentfile, '\.mmd$') != -1
     exec ":!mmdc -e png -i " . currentfile
-  end
+  elseif match(currentfile, '\.py$') != -1
+    exec ":!pytest " . currentfile
+  endif
 endfunction
 
 map <leader>a :call RunTests('')<cr>
