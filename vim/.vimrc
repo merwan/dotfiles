@@ -117,6 +117,7 @@ nmap <leader>= :ALEFix<CR>
 let g:ale_fixers = {
          \ 'python': ['isort', 'black'],
          \ 'javascript': ['eslint', 'prettier'],
+         \ 'markdown': ['prettier'],
          \ 'java': ['clang-format'],
          \ 'lua': ['stylua']
          \ }
