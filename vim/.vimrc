@@ -6,7 +6,7 @@ call plug#begin()
 
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'elixir-editors/vim-elixir', {'commit': 'ff7a1223dfc'}
+Plug 'elixir-editors/vim-elixir'
 Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'neoclide/coc-tsserver'
 Plug 'tpope/vim-fugitive'
@@ -114,14 +114,17 @@ nmap <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
 " Ale configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>= :ALEFix<CR>
+"let g:ale_python_auto_virtualenv = 1
+let g:ale_python_auto_virtualenv = 1
 let g:ale_fixers = {
-         \ 'python': ['isort', 'black'],
+         \ 'python': ['isort', 'black', 'ruff'],
          \ 'javascript': ['eslint', 'prettier'],
+         \ 'json': ['jq'],
          \ 'markdown': ['prettier'],
          \ 'java': ['clang-format'],
          \ 'lua': ['stylua']
          \ }
-let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linters = {'javascript': ['eslint'], 'python': ['ruff', 'mypy']}
 " move cursor to the next error
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
 " change default markers to dots
@@ -131,6 +134,7 @@ let g:ale_sign_warning = '.'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COC configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:coc_node_path = '/home/merouane/.asdf/shims/node'
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
@@ -230,3 +234,12 @@ function! RunTests(filename)
 endfunction
 
 map <leader>a :call RunTests('')<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-elixir
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntax highlighting broken for .*eex files #562
+" https://github.com/elixir-editors/vim-elixir/issues/562#issuecomment-1092331491
+au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
+au BufRead,BufNewFile mix.lock set filetype=elixir
