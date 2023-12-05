@@ -115,17 +115,22 @@ nmap <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
 " Ale configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>= :ALEFix<CR>
-"let g:ale_python_auto_virtualenv = 1
+let g:ale_completion_enabled = 1
 let g:ale_python_auto_virtualenv = 1
 let g:ale_fixers = {
          \ 'python': ['isort', 'black', 'ruff'],
+         \ 'elixir': ['mix_format'],
          \ 'javascript': ['eslint', 'prettier'],
          \ 'json': ['jq'],
          \ 'markdown': ['prettier'],
          \ 'java': ['clang-format'],
          \ 'lua': ['stylua']
          \ }
-let g:ale_linters = {'javascript': ['eslint'], 'python': ['ruff', 'mypy']}
+let g:ale_linters = {
+         \ 'javascript': ['eslint'],
+         \ 'python': ['ruff', 'mypy'],
+         \ 'elixir': ['credo', 'dialyxir', 'mix']
+         \ }
 " move cursor to the next error
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
 " change default markers to dots
