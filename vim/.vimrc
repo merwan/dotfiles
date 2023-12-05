@@ -22,6 +22,7 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
+Plug 'Glench/Vim-Jinja2-Syntax'
 
 call plug#end()
 
