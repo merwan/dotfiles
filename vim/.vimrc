@@ -1,14 +1,17 @@
 " This is Merouane Atig's .vimrc file
 " vim:set ts=2 sts=2 sw=2 expandtab:
 
+set nocompatible
+
 " initialize plugins
 call plug#begin()
 
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'elixir-editors/vim-elixir'
-Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'neoclide/coc-tsserver'
+Plug 'neoclide/coc-json'
+Plug 'fannheyward/coc-markdownlint'
+Plug 'elixir-editors/vim-elixir'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
@@ -17,19 +20,18 @@ Plug 'rust-lang/rust.vim'
 Plug 'romainl/vim-cool'
 Plug 'leafgarland/typescript-vim'
 Plug 'terrastruct/d2-vim'
-Plug 'dense-analysis/ale'
 Plug 'lifepillar/vim-solarized8'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
+"Plug 'pearofducks/ansible-vim'
 
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" BASIC EDITING CONFIGURATION
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
 " remember more commands and search history
@@ -114,32 +116,36 @@ nmap <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ale configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <leader>= :ALEFix<CR>
-let g:ale_completion_enabled = 1
-let g:ale_python_auto_virtualenv = 1
-let g:ale_fixers = {
-         \ 'python': ['isort', 'black', 'ruff'],
-         \ 'elixir': ['mix_format'],
-         \ 'javascript': ['eslint', 'prettier'],
-         \ 'json': ['jq'],
-         \ 'markdown': ['prettier'],
-         \ 'java': ['clang-format'],
-         \ 'lua': ['stylua']
-         \ }
-let g:ale_linters = {
-         \ 'javascript': ['eslint'],
-         \ 'python': ['ruff', 'mypy'],
-         \ 'elixir': ['credo', 'dialyxir', 'mix']
-         \ }
-" move cursor to the next error
-nmap <silent> <C-e> <Plug>(ale_next_wrap)
-" change default markers to dots
-let g:ale_sign_error = '●'
-let g:ale_sign_warning = '.'
+"nmap <leader>= :ALEFix<CR>
+"let g:ale_completion_enabled = 1
+"let g:ale_python_auto_virtualenv = 1
+"let g:ale_fixers = {
+"         \ 'python': ['isort', 'black', 'ruff'],
+"         \ 'elixir': ['mix_format'],
+"         \ 'javascript': ['eslint', 'prettier'],
+"         \ 'json': ['jq'],
+"         \ 'markdown': ['prettier'],
+"         \ 'java': ['clang-format'],
+"         \ 'lua': ['stylua']
+"         \ }
+"let g:ale_linters = {
+"         \ 'javascript': ['eslint'],
+"         \ 'python': ['ruff', 'mypy'],
+"         \ 'elixir': ['credo', 'dialyxir', 'mix']
+"         \ }
+"" move cursor to the next error
+"nmap <silent> <C-e> <Plug>(ale_next_wrap)
+"" change default markers to dots
+"let g:ale_sign_error = '●'
+"let g:ale_sign_warning = '.'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COC configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
+" utf-8 byte sequence
+set encoding=utf-8
+
 let g:coc_node_path = '/home/merouane/.asdf/shims/node'
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
@@ -148,8 +154,7 @@ set updatetime=300
 " diagnostics appear/become resolved.
 set signcolumn=yes
 " Use tab for trigger completion with characters ahead and navigate.
-" NOTE: There's always complete item selected by default, you may want to
-" enable
+" NOTE: There's always complete item selected by default, you may want to enable
 " no select by `"suggest.noselect": true` in your configuration file.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -203,8 +208,28 @@ endfunction
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-"xmap <leader>=  <Plug>(coc-format-selected)
-"nmap <leader>=  <Plug>(coc-format-selected)
+xmap <leader>=  <Plug>(coc-format)
+nmap <leader>=  <Plug>(coc-format)
+
+" Applying code actions to the selected code block
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap keys for applying code actions at the cursor position
+nmap <leader>ac  <Plug>(coc-codeaction-cursor)
+" Remap keys for apply code actions affect whole buffer
+nmap <leader>as  <Plug>(coc-codeaction-source)
+" Apply the most preferred quickfix action to fix diagnostic on the current line
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Remap keys for applying refactor code actions
+nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)
+xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+
+" Run the Code Lens action on the current line
+nmap <leader>cl  <Plug>(coc-codelens-action)
 
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 if has('nvim-0.4.0') || has('patch-8.2.0750')
@@ -224,6 +249,11 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+
+" Add (Neo)Vim's native statusline support
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
@@ -249,3 +279,11 @@ map <leader>a :call RunTests('')<cr>
 au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
 au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
 au BufRead,BufNewFile mix.lock set filetype=elixir
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" coc-ansible
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
+let g:coc_filetype_map = {
+  \ 'yaml.ansible': 'ansible',
+  \ }
