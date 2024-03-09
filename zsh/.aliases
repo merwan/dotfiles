@@ -1,14 +1,18 @@
 # Administration
 alias update="sudo apt update && sudo apt dist-upgrade --purge"
-alias autoremove="sudo apt autoremove --purge"
+alias autopurge="sudo apt autopurge"
 alias ip='ip --color'
 alias ipb='ip --color --brief'
 
 # Docker
+alias docker-compose="docker compose"
 alias dk="docker-compose"
 alias dkr="docker-compose run --rm"
 alias odk="optirun docker-compose"
 alias odkr="optirun docker-compose run --rm"
+
+# Python
+alias sav="source .venv/bin/activate"
 
 # Git
 alias grpo="git remote prune origin"
@@ -18,8 +22,13 @@ alias ytmp3="yt-dlp -x --audio-format=mp3"
 GTG_BASE_DIR="~/.var/app/org.gnome.GTG"
 alias gtgwork="ln -snvf $GTG_BASE_DIR-work $GTG_BASE_DIR"
 alias gtgperso="ln -snvf $GTG_BASE_DIR-personal $GTG_BASE_DIR"
+alias nv="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
+alias rsw="sudo modprobe -r ath10k_pci && sudo modprobe ath10k_pci"
 
 # Kitty
 alias s="kitty +kitten ssh"
+
+#alias unity="nv unityhub"
+alias Godot4="nv ~/Apps/Godot/Godot_v4.2-rc2_linux.x86_64"
 
 [[ -s "$HOME/.aliases-local" ]] && source "$HOME/.aliases-local" # local aliases
