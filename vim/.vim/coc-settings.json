@@ -1,9 +1,15 @@
 {
   "elixirLS.dialyzerEnabled": false,
+  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "python.linting.mypyEnabled": true,
   "python.linting.ruffEnabled": true,
   "python.formatting.provider": "black",
   "pyright.testing.provider": "pytest",
+  "workspace.ignoredFolders": [
+    "$HOME",
+    "$HOME/.cargo/**",
+    "$HOME/.rustup/**"
+  ],
   "languageserver": {
     "ccls": {
       "command": "ccls",
