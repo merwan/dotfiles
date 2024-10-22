@@ -266,10 +266,33 @@ function! RunTests(filename)
     exec ":!mmdc -e png -i " . currentfile
   elseif match(currentfile, '\.py$') != -1
     exec ":!pytest " . currentfile
+  elseif match(currentfile, '\.rs$') != -1
+    exec ":!cargo run"
   endif
 endfunction
 
-map <leader>a :call RunTests('')<cr>
+map <leader>t :call RunTests('')<cr>
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RUNNING SCRIPT
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RunScript(filename)
+  " Write the file and run the given filename as a script
+  if expand("%") != ""
+    :w
+  end
+  let currentfile = expand("%")
+  " The file is executable; assume we should run
+  if executable(currentfile)
+    exec ":!./" . a:filename
+  elseif match(currentfile, '\.py$') != -1
+    exec ":!python " . currentfile
+  elseif match(currentfile, '\.rs$') != -1
+    exec ":!cargo run"
+  endif
+endfunction
+
+map <leader>x :call RunScript('')<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-elixir
