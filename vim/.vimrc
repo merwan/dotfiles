@@ -288,7 +288,7 @@ function! RunScript(filename)
   elseif match(currentfile, '\.py$') != -1
     exec ":!python " . currentfile
   elseif match(currentfile, '\.rs$') != -1
-    exec ":!cargo run"
+    exec ":!cargo run; read"
   endif
 endfunction
 
