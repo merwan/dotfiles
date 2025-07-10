@@ -13,6 +13,9 @@ alias odkr="optirun docker-compose run --rm"
 
 # Python
 alias sav="source .venv/bin/activate"
+alias venv="python3 -m venv .venv"
+alias pirr="pip install -r requirements.txt"
+alias piu="pip install -U"
 
 # Git
 alias grpo="git remote prune origin"
@@ -29,6 +32,7 @@ alias rsw="sudo modprobe -r ath10k_pci && sudo modprobe ath10k_pci"
 alias s="kitty +kitten ssh"
 
 #alias unity="nv unityhub"
-alias Godot4="nv ~/Apps/Godot/Godot_v4.2-rc2_linux.x86_64"
+alias Godot4="nv ~/Apps/Godot/Godot_v4.3-beta1_linux.x86_64"
+alias chromegpu="chromium --enable-unsafe-webgpu --enable-features=Vulkan,UseSkiaRenderer --user-data-dir=~/.config/chromium-dev-profile"
 
 [[ -s "$HOME/.aliases-local" ]] && source "$HOME/.aliases-local" # local aliases
