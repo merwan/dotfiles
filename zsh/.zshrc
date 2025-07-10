@@ -40,7 +40,7 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git colored-man-pages dotenv docker-compose python virtualenv)
+plugins=(git colored-man-pages dotenv docker docker-compose python virtualenv rust)
 export PYTHON_VENV_NAME=".venv"
 export PYTHON_AUTO_VRUN=true
 
@@ -84,5 +84,4 @@ export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 . /usr/share/autojump/autojump.sh
 
 # Load ASDF
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
